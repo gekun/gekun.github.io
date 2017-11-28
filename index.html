@@ -61,6 +61,57 @@
 
   
     
+    <h3 class="article-title"><a href="/2017/11/28/错误/"><span>错误</span></a></h3>
+    
+  
+
+  <div class="article-top-meta">
+    <span class="posted-on">
+      <a href="/2017/11/28/错误/" rel="bookmark">
+        <time class="entry-date published" datetime="2017-11-28T14:24:28.000Z">
+          2017-11-28
+        </time>
+      </a>
+    </span>
+  </div>
+
+
+  
+
+  <div class="article-content">
+    <div class="entry">
+      
+        <h1 id="Github-Pages-404-错误"><a href="#Github-Pages-404-错误" class="headerlink" title="Github Pages 404 错误"></a>Github Pages 404 错误</h1><p>有一阵子没用hexo了，今天重新用发布的时候出现了<strong>404错误</strong>。提示找不到<strong>index.html</strong>文件。</p>
+<p>一阵小紧张。</p>
+<p>忘了太久了。</p>
+<p>看了网上一些问题，提示虽然也是404，但是和我的情况不一样。我的是<strong>之前一直能访问的</strong>，反而发布了一个新的post后，就提示404了。</p>
+<p>排查了好一会儿，发现了问题了。</p>
+<p>因为刚才发布的时候有点问题，所以我用<strong>git init</strong>命令在本地的username.github.io目录下运行了一下，但是其实应该在其子目录public下运行才对。所有deploy的时候，它把父目录全部提交了，所以找不到index.html文件了。验证的方法很简单，就是在网址后面加上/public试试看。找到问题就简单了，删除错误的.git目录和.deloy_git目录。在public目录下再重新<strong>git init</strong>下。再次deploy，成功了。网站正常打开。</p>
+
+      
+    </div>
+
+  </div>
+
+  <div class="article-footer">
+    <div class="article-meta pull-left">
+
+    
+
+    
+
+    </div>
+
+    
+  </div>
+</article>
+
+
+
+  <article>
+
+  
+    
     <h3 class="article-title"><a href="/2017/11/28/再试试看/"><span>再试试看</span></a></h3>
     
   
