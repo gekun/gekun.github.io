@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[启动Mac终端提示-bash .profile No such file or directory错误]]></title>
+    <url>%2F2017%2F11%2F29%2FprofileMissingInMac%2F</url>
+    <content type="text"><![CDATA[1.进入用户目录1cd ~ 2.创建.profile1touch .profile 3.重启终端]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[MacOs系统下使用VSCode对Cpp进行debug]]></title>
     <url>%2F2017%2F11%2F29%2FUsingVsCodeDebugCppInMacOs%2F</url>
     <content type="text"><![CDATA[1.下载安装VSCode2.安装cpptools1cpptools 3.安装clang++1clang++ 4.Comd+Q,退出VSCode，重新打开VSCode。5.生成c_cpp_properties.json按fn+F1调出命令行模式，选择[C/Cpp: Edit Configurations]，会自动生成c_cpp_properties.json，在mac节点中，会自动选择xcode自带的相关include和lib等路径【所以，事先要安装好xcode】。 6.生成一个tasks.json调出命令行，选择[Tasks: Configure Task]，生成一个tasks.json。内容参考如下：123456789&#123; // See https://go.microsoft.com/fwlink/?LinkId=733558 // for the documentation about the tasks.json format "version": "0.1.0", "command": "clang++", //使用clang++编译Cpp文件，如果你使用C开发，改成clang "isShellCommand": true, "args": ["test.cpp", "-g"],//如果使用的是C，则改成test.c或者相对应的c入口文件。如果需要支持C++11，添加"-std=c++11" "showOutput": "always"&#125; 7.生成launch.json进入命令行，选择[Debug: Open launch.json]，内容参考如下：12345678910111213141516171819&#123; "version": "0.2.0", "configurations": [ &#123; "name": "C++ Launch (GDB)", "type": "cppdbg", "request": "launch", "targetArchitecture": "x86_64", "program": "$&#123;workspaceRoot&#125;/a.out", "args": [], "stopAtEntry": false, "cwd": "$&#123;workspaceRoot&#125;", "environment": [], "externalConsole": true, "MIMode": "lldb", "preLaunchTask": "clang++" //如果使用的是C，改为clang &#125; ] &#125; 8.测试，编写一个test.cpp1234567#include &lt;iostream&gt;using namespace std;int main(void)&#123; cout&lt;&lt;"Hello World!"&lt;&lt;endl; return 0;&#125; 使用shift+command+b，编译生成a.out。Fn+F5进行debug调试。可以设断点，单步调试。 最后，调试时，VSCode会挡住终端窗口，害的我以为在VsCode里面的输出里面看结果。]]></content>
