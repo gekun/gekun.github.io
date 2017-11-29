@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[使用标签和分类]]></title>
+    <url>%2F2017%2F11%2F29%2F%E4%BD%BF%E7%94%A8%E6%A0%87%E7%AD%BE%E5%92%8C%E5%88%86%E7%B1%BB%2F</url>
+    <content type="text"><![CDATA[测试一下分类和标签]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>标签</tag>
+        <tag>tag</tag>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[insert a pic again]]></title>
+    <url>%2F2017%2F11%2F28%2Finsert-a-pic-again%2F</url>
+    <content type="text"><![CDATA[刚才的失败了。再试试看这次。来个锤子！看看能不能成功。哈哈。]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[含本地图片的post测试]]></title>
+    <url>%2F2017%2F11%2F28%2F%E5%90%AB%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87%E7%9A%84post%E6%B5%8B%E8%AF%95%2F</url>
+    <content type="text"><![CDATA[发个锤子。]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[hexo用的很不熟]]></title>
+    <url>%2F2017%2F11%2F28%2Fhexo%E7%94%A8%E7%9A%84%E5%BE%88%E4%B8%8D%E7%86%9F%2F</url>
+    <content type="text"><![CDATA[hexo用的很不熟。 今天抽空复习了一下md文件的写法。 有时间再去hexo中文官网去看看文档，学学如何使用hexo。]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[错误]]></title>
+    <url>%2F2017%2F11%2F28%2F%E9%94%99%E8%AF%AF%2F</url>
+    <content type="text"><![CDATA[Github Pages 404 错误有一阵子没用hexo了，今天重新用发布的时候出现了404错误。提示找不到index.html文件。 一阵小紧张。 忘了太久了。 看了网上一些问题，提示虽然也是404，但是和我的情况不一样。我的是之前一直能访问的，反而发布了一个新的post后，就提示404了。 排查了好一会儿，发现了问题了。 因为刚才发布的时候有点问题，所以我用git init命令在本地的username.github.io目录下运行了一下，但是其实应该在其子目录public下运行才对。所有deploy的时候，它把父目录全部提交了，所以找不到index.html文件了。验证的方法很简单，就是在网址后面加上/public试试看。找到问题就简单了，删除错误的.git目录和.deloy_git目录。在public目录下再重新git init下。再次deploy，成功了。网站正常打开。]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[再试试看]]></title>
+    <url>%2F2017%2F11%2F28%2F%E5%86%8D%E8%AF%95%E8%AF%95%E7%9C%8B%2F</url>
+    <content type="text"><![CDATA[再试试看。。。]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[Something bad happened...]]></title>
+    <url>%2F2017%2F11%2F28%2FSomething-bad-happened%2F</url>
+    <content type="text"><![CDATA[好像deploy出了点问题。。。]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[It still works?]]></title>
+    <url>%2F2017%2F11%2F28%2FIt-still-works%2F</url>
+    <content type="text"><![CDATA[惭愧，多久没有碰它了。后面抽空还是写点东西，记录点东西。]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[Mac远程Win失败]]></title>
+    <url>%2F2016%2F09%2F18%2FMac%E8%BF%9C%E7%A8%8BWin10%E5%A4%B1%E8%B4%A5%2F</url>
+    <content type="text"><![CDATA[Mac远程Win10失败，提示：远程桌面连接无法验证您希望连接的计算机的身份SolutionEnable RDP security layer in Group Policy on the machine: Verify that the firewall allows remote desktop connections with RDP (Port 3389)Click Start&gt;RunType gpedit.msc and click “OK”Result: The Group Policy Editor will openIn the left hand side bar, expand Computer Configuration&gt;Administrative Templates&gt;Windows Components&gt;Remote Desktop Services&gt;Remote Desktop Session HostSelect “Security”Change “Require use of specific security layer for remote desktop (RDP) connection” to Enabled” and select “RDP” in the Options pane.Change “Require user authentication for remote connections by using Network Level Authentication” to “Disabled.”Close Group Policy Editor and reboot the machine for changes to take effect.]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[test!]]></title>
+    <url>%2F2016%2F09%2F08%2Ftest%2F</url>
+    <content type="text"><![CDATA[#This is my first Post test.]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <url>%2F2016%2F09%2F08%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+  </entry>
+</search>
