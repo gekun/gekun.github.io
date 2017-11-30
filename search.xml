@@ -48,9 +48,13 @@
     <content type="text"><![CDATA[Github Pages 404 错误有一阵子没用hexo了，今天重新用发布的时候出现了404错误。提示找不到index.html文件。 一阵小紧张。 忘了太久了。 看了网上一些问题，提示虽然也是404，但是和我的情况不一样。我的是之前一直能访问的，反而发布了一个新的post后，就提示404了。 排查了好一会儿，发现了问题了。 因为刚才发布的时候有点问题，所以我用git init命令在本地的username.github.io目录下运行了一下，但是其实应该在其子目录public下运行才对。所有deploy的时候，它把父目录全部提交了，所以找不到index.html文件了。验证的方法很简单，就是在网址后面加上/public试试看。找到问题就简单了，删除错误的.git目录和.deloy_git目录。在public目录下再重新git init下。再次deploy，成功了。网站正常打开。]]></content>
   </entry>
   <entry>
-    <title></title>
+    <title><![CDATA[Mac远程Win失败]]></title>
     <url>%2F2016%2F09%2F18%2FMac%E8%BF%9C%E7%A8%8BWin10%E5%A4%B1%E8%B4%A5%2F</url>
-    <content type="text"><![CDATA[title: Mac远程Win失败date: 2016-09-18 18:37:54tags: mac 远程—Mac远程Win10失败，提示：远程桌面连接无法验证您希望连接的计算机的身份 Solution 1.Enable RDP security layer in Group Policy on the machine. 2.Verify that the firewall allows remote desktop connections with RDP (Port 3389) 3.Click Start&gt;Run，Type gpedit.msc and click “OK”, The Group Policy Editor will open. 4,In the left hand side bar, expand Computer Configuration&gt;Administrative Templates&gt;Windows Components&gt;Remote Desktop Services&gt;Remote Desktop Session Host. 5.Select “Security”,Change “Require use of specific security layer for remote desktop (RDP) connection” to Enabled” and select “RDP” in the Options pane. 6.Change “Require user authentication for remote connections by using Network Level,Authentication” to “Disabled.” 7.Close Group Policy Editor and reboot the machine for changes to take effect.]]></content>
+    <content type="text"><![CDATA[Mac远程Win10失败，提示：远程桌面连接无法验证您希望连接的计算机的身份 Solution 1.Enable RDP security layer in Group Policy on the machine. 2.Verify that the firewall allows remote desktop connections with RDP (Port 3389) 3.Click Start&gt;Run，Type gpedit.msc and click “OK”, The Group Policy Editor will open. 4,In the left hand side bar, expand Computer Configuration&gt;Administrative Templates&gt;Windows Components&gt;Remote Desktop Services&gt;Remote Desktop Session Host. 5.Select “Security”,Change “Require use of specific security layer for remote desktop (RDP) connection” to Enabled” and select “RDP” in the Options pane. 6.Change “Require user authentication for remote connections by using Network Level,Authentication” to “Disabled.” 7.Close Group Policy Editor and reboot the machine for changes to take effect.]]></content>
+      <tags>
+        <tag>mac</tag>
+        <tag>远程</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[test!]]></title>
