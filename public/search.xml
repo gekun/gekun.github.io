@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[如何去备份hexo博客]]></title>
+    <url>%2F2017%2F11%2F30%2Fhowtobackupblog%2F</url>
+    <content type="text"><![CDATA[博客搭建好后，在git里面的只有静态文件，没有.md源文件。所以不备份的话，以后换电脑或者换个环境是个问题。通用的方法是使用git分支来备份源文件。以下是步骤： 1.在git上创建一个分支取名hexo，这个取名可以随意的。 2.设置hexo为默认分支。 3.在本地新建个文件夹，将hexo仓库clone至本地，将之前源文件夹中的内容复制到此目录，即username.github.io，public目录可以不用复制，因为它是生成的静态文件; 4.如果之前的目录内，如主题等，里面有.git，要将其删除掉，否则无法push。 5.在username.github.io目录下，执行npm install , npm install hexo-deployer-git。 6.执行git add，git commit -m “消息内容”，git push origin hexo提交源文件。 7.执行hexo g -d生成静态文件部署到git上。]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[启动Mac终端提示-bash .profile No such file or directory错误]]></title>
+    <url>%2F2017%2F11%2F29%2FprofileMissingInMac%2F</url>
+    <content type="text"><![CDATA[1.进入用户目录1cd ~ 2.创建.profile1touch .profile 3.重启终端]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[MacOs系统下使用VSCode对Cpp进行debug]]></title>
+    <url>%2F2017%2F11%2F29%2FUsingVsCodeDebugCppInMacOs%2F</url>
+    <content type="text"><![CDATA[1.下载安装VSCode2.安装cpptools1cpptools 3.安装clang++1clang++ 4.Comd+Q,退出VSCode，重新打开VSCode。5.生成c_cpp_properties.json按fn+F1调出命令行模式，选择[C/Cpp: Edit Configurations]，会自动生成c_cpp_properties.json，在mac节点中，会自动选择xcode自带的相关include和lib等路径【所以，事先要安装好xcode】。 6.生成一个tasks.json调出命令行，选择[Tasks: Configure Task]，生成一个tasks.json。内容参考如下：123456789&#123; // See https://go.microsoft.com/fwlink/?LinkId=733558 // for the documentation about the tasks.json format "version": "0.1.0", "command": "clang++", //使用clang++编译Cpp文件，如果你使用C开发，改成clang "isShellCommand": true, "args": ["test.cpp", "-g"],//如果使用的是C，则改成test.c或者相对应的c入口文件。如果需要支持C++11，添加"-std=c++11" "showOutput": "always"&#125; 7.生成launch.json进入命令行，选择[Debug: Open launch.json]，内容参考如下：12345678910111213141516171819&#123; "version": "0.2.0", "configurations": [ &#123; "name": "C++ Launch (GDB)", "type": "cppdbg", "request": "launch", "targetArchitecture": "x86_64", "program": "$&#123;workspaceRoot&#125;/a.out", "args": [], "stopAtEntry": false, "cwd": "$&#123;workspaceRoot&#125;", "environment": [], "externalConsole": true, "MIMode": "lldb", "preLaunchTask": "clang++" //如果使用的是C，改为clang &#125; ] &#125; 8.测试，编写一个test.cpp1234567#include &lt;iostream&gt;using namespace std;int main(void)&#123; cout&lt;&lt;"Hello World!"&lt;&lt;endl; return 0;&#125; 使用shift+command+b，编译生成a.out。Fn+F5进行debug调试。可以设断点，单步调试。 最后，调试时，VSCode会挡住终端窗口，害的我以为在VsCode里面的输出里面看结果。]]></content>
+      <tags>
+        <tag>Mac</tag>
+        <tag>VSCode</tag>
+        <tag>C++</tag>
+        <tag>debug</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[关于hexo的一些]]></title>
+    <url>%2F2017%2F11%2F29%2F%E5%85%B3%E4%BA%8Ehexo%E7%9A%84%E4%B8%80%E4%BA%9B%2F</url>
+    <content type="text"><![CDATA[Hexo，真的很不错。 用hexo和github很早就建了一个个人博客，但是一直没有怎么用。 这两天捡起来，又做了些配置和调整。遇到一些问题，一个个解决了。 1.发布后，遇到404问题。原因是将整个项目提交至git了，而不是public目录。 2.学着发了个图片试试。发图片可以选择本地方式和外链方式。两个方式都试了，比较了一下，还是选择把图片存在了七牛云上这种外链方式。 3.主题从hack更换为NexT 4.将标签和分类启用。 5.上传了一个avatar头像。 还有很多地方需要花点时间了解。记录于此。]]></content>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[hexo用的很不熟]]></title>
+    <url>%2F2017%2F11%2F28%2Fhexo%E7%94%A8%E7%9A%84%E5%BE%88%E4%B8%8D%E7%86%9F%2F</url>
+    <content type="text"><![CDATA[hexo用的很不熟。 今天抽空复习了一下md文件的写法。 有时间再去hexo中文官网去看看文档，学学如何使用hexo。]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[错误]]></title>
+    <url>%2F2017%2F11%2F28%2F%E9%94%99%E8%AF%AF%2F</url>
+    <content type="text"><![CDATA[Github Pages 404 错误有一阵子没用hexo了，今天重新用发布的时候出现了404错误。提示找不到index.html文件。 一阵小紧张。 忘了太久了。 看了网上一些问题，提示虽然也是404，但是和我的情况不一样。我的是之前一直能访问的，反而发布了一个新的post后，就提示404了。 排查了好一会儿，发现了问题了。 因为刚才发布的时候有点问题，所以我用git init命令在本地的username.github.io目录下运行了一下，但是其实应该在其子目录public下运行才对。所有deploy的时候，它把父目录全部提交了，所以找不到index.html文件了。验证的方法很简单，就是在网址后面加上/public试试看。找到问题就简单了，删除错误的.git目录和.deloy_git目录。在public目录下再重新git init下。再次deploy，成功了。网站正常打开。]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[Mac远程Win失败]]></title>
+    <url>%2F2016%2F09%2F18%2FMac%E8%BF%9C%E7%A8%8BWin10%E5%A4%B1%E8%B4%A5%2F</url>
+    <content type="text"><![CDATA[Mac远程Win10失败，提示：远程桌面连接无法验证您希望连接的计算机的身份SolutionEnable RDP security layer in Group Policy on the machine: Verify that the firewall allows remote desktop connections with RDP (Port 3389)Click Start&gt;RunType gpedit.msc and click “OK”Result: The Group Policy Editor will openIn the left hand side bar, expand Computer Configuration&gt;Administrative Templates&gt;Windows Components&gt;Remote Desktop Services&gt;Remote Desktop Session HostSelect “Security”Change “Require use of specific security layer for remote desktop (RDP) connection” to Enabled” and select “RDP” in the Options pane.Change “Require user authentication for remote connections by using Network Level Authentication” to “Disabled.”Close Group Policy Editor and reboot the machine for changes to take effect.]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[test!]]></title>
+    <url>%2F2016%2F09%2F08%2Ftest%2F</url>
+    <content type="text"><![CDATA[#This is my first Post test.]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <url>%2F2016%2F09%2F08%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+  </entry>
+</search>
