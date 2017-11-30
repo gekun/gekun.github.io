@@ -3,7 +3,7 @@ title: 如何去备份hexo博客
 date: 2017-11-30 08:02:01
 tags:
 - hexo
-- 备份
+- 备份
 - hexo命令
 category:
 - 技术
@@ -28,7 +28,8 @@ npm install hexo-deployer-git
 ```
 
 * 6.执行提交源文件。
-```git add
+```
+git add .
 git commit -m "文件提交"
 git push origin hexo
 ```
@@ -39,7 +40,7 @@ hexo g -d
 ```
 
 ## 发布、修改
-以后在本地username.github.io内对博客内容进行修改后，做两部即可。
+以后在本地username.github.io内对博客内容进行修改后，做以下两步即可：
 
 * 1.备份源文件
 ```
@@ -67,17 +68,17 @@ npm install hexo-deployer-git
 
 ## 附录
 Hexo的源文件说明：
-1、_config.yml站点的配置文件，需要拷贝；
-2、themes/主题文件夹，需要拷贝；
-3、source博客文章的.md文件，需要拷贝；
-4、scaffolds/文章的模板，需要拷贝；
-5、package.json安装包的名称，需要拷贝；
-6、.gitignore限定在push时哪些文件可以忽略，需要拷贝；
-7、.git/主题和站点都有，标志这是一个git项目，不需要拷贝；
-8、node_modules/是安装包的目录，在执行npm install的时候会重新生成，不需要拷贝；
-9、public是hexo g生成的静态网页，不需要拷贝；
-10、.deploy_git同上，hexo g也会生成，不需要拷贝；
-11、db.json文件，不需要拷贝。
+1、*_config.yml*站点的配置文件，需要拷贝；
+2、*themes/*主题文件夹，需要拷贝；
+3、*source*博客文章的.md文件，需要拷贝；
+4、*scaffolds/*文章的模板，需要拷贝；
+5、*package.json*安装包的名称，需要拷贝；
+6、*.gitignore*限定在push时哪些文件可以忽略，需要拷贝；
+7、*.git/*主题和站点都有，表示这是一个git项目，不需要拷贝；
+8、*node_modules/*是安装包的目录，在执行npm install的时候会重新生成，不需要拷贝；
+9、*public*是hexo g生成的静态网页，不需要拷贝；
+10、*.deploy_git*同上，hexo g也会生成，不需要拷贝；
+11、*db.json*文件，不需要拷贝。
 
 ## hexo命令补充说明
 ```
