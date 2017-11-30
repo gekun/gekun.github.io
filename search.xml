@@ -4,6 +4,14 @@
     <title><![CDATA[如何去备份hexo博客]]></title>
     <url>%2F2017%2F11%2F30%2Fhowtobackupblog%2F</url>
     <content type="text"><![CDATA[备份博客搭建好后，在git里面的只有静态文件，没有.md源文件。所以不备份的话，以后换电脑或者换个环境是个问题。通用的方法是使用git分支来备份源文件。以下是步骤： 1.在git上创建一个分支取名hexo，这个取名可以随意的。 2.设置hexo为默认分支。 3.在本地新建个文件夹，将hexo仓库clone至本地，将之前源文件夹中的内容复制到此目录，即username.github.io，public目录可以不用复制，因为它是生成的静态文件; 4.如果之前的目录内，如主题等，里面有.git，要将其删除掉，否则无法push。 5.在username.github.io目录下，执行 12npm installnpm install hexo-deployer-git 6.执行提交源文件。 add12git commit -m &quot;文件提交&quot;git push origin hexo 7.生成静态文件部署到git上。 1hexo g -d 发布、修改以后在本地username.github.io内对博客内容进行修改后，做两部即可。 1.备份源文件 123git add .git commit -m &quot;文件提交、修改&quot;git push //如果不放心，可以指定git push origin hexo 2.生成静态网页并部署 1hexo g -d 以后重复这两步即可。 从备份恢复 1.目标电脑安装git 2.安装node.js和npm 3.将仓库从git克隆之本地 4.执行命令123npm install hexo-cli -gnpm installnpm install hexo-deployer-git 附录Hexo的源文件说明：1、_config.yml站点的配置文件，需要拷贝；2、themes/主题文件夹，需要拷贝；3、source博客文章的.md文件，需要拷贝；4、scaffolds/文章的模板，需要拷贝；5、package.json安装包的名称，需要拷贝；6、.gitignore限定在push时哪些文件可以忽略，需要拷贝；7、.git/主题和站点都有，标志这是一个git项目，不需要拷贝；8、node_modules/是安装包的目录，在执行npm install的时候会重新生成，不需要拷贝；9、public是hexo g生成的静态网页，不需要拷贝；10、.deploy_git同上，hexo g也会生成，不需要拷贝；11、db.json文件，不需要拷贝。 hexo命令补充说明1234567891011121314hexo new &quot;postName&quot; #新建文章hexo new page &quot;pageName&quot; #新建页面hexo generate #生成静态页面至public目录hexo server #开启预览访问端口（默认端口4000，&apos;ctrl + c&apos;关闭server）hexo deploy #将.deploy目录部署到GitHubhexo help # 查看帮助hexo version #查看Hexo的版本hexo deploy -g #生成加部署hexo server -g #生成加预览命令的简写hexo n == hexo newhexo g == hexo generatehexo s == hexo serverhexo d == hexo deploy 参考怎么去备份你的hexo博客 搭建Hexo博客中碰到的坑]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>备份</tag>
+        <tag>hexo命令</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[启动Mac终端提示-bash .profile No such file or directory错误]]></title>
