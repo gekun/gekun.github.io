@@ -2,6 +2,11 @@
 title: 如何去备份hexo博客
 date: 2017-11-30 08:02:01
 tags:
+- hexo
+- 备份
+- hexo命令
+category:
+- 技术
 ---
 ## 备份
 

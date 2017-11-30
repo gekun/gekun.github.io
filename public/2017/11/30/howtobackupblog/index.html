@@ -79,34 +79,34 @@
 
 
 
-<meta name="description" content="博客搭建好后，在git里面的只有静态文件，没有.md源文件。所以不备份的话，以后换电脑或者换个环境是个问题。通用的方法是使用git分支来备份源文件。以下是步骤：
+<meta name="description" content="备份博客搭建好后，在git里面的只有静态文件，没有.md源文件。所以不备份的话，以后换电脑或者换个环境是个问题。通用的方法是使用git分支来备份源文件。以下是步骤：
 
 1.在git上创建一个分支取名hexo，这个取名可以随意的。
 
 2.设置hexo为默认分支。
 
-3.在本地新建个文件夹，将hexo仓库clone至本地，将之前源文件夹中的内容复制到此目录，即username.github.io，publ">
+3.在本地新建个文件夹，将hexo仓库clone至本地，将之前源文件夹中的内容复制到此目录，即username.github.io，pu">
 <meta property="og:type" content="article">
 <meta property="og:title" content="如何去备份hexo博客">
 <meta property="og:url" content="http://wxmng.com/2017/11/30/howtobackupblog/index.html">
 <meta property="og:site_name" content="Kun's">
-<meta property="og:description" content="博客搭建好后，在git里面的只有静态文件，没有.md源文件。所以不备份的话，以后换电脑或者换个环境是个问题。通用的方法是使用git分支来备份源文件。以下是步骤：
+<meta property="og:description" content="备份博客搭建好后，在git里面的只有静态文件，没有.md源文件。所以不备份的话，以后换电脑或者换个环境是个问题。通用的方法是使用git分支来备份源文件。以下是步骤：
 
 1.在git上创建一个分支取名hexo，这个取名可以随意的。
 
 2.设置hexo为默认分支。
 
-3.在本地新建个文件夹，将hexo仓库clone至本地，将之前源文件夹中的内容复制到此目录，即username.github.io，publ">
-<meta property="og:updated_time" content="2017-11-30T00:17:55.344Z">
+3.在本地新建个文件夹，将hexo仓库clone至本地，将之前源文件夹中的内容复制到此目录，即username.github.io，pu">
+<meta property="og:updated_time" content="2017-11-30T00:37:44.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何去备份hexo博客">
-<meta name="twitter:description" content="博客搭建好后，在git里面的只有静态文件，没有.md源文件。所以不备份的话，以后换电脑或者换个环境是个问题。通用的方法是使用git分支来备份源文件。以下是步骤：
+<meta name="twitter:description" content="备份博客搭建好后，在git里面的只有静态文件，没有.md源文件。所以不备份的话，以后换电脑或者换个环境是个问题。通用的方法是使用git分支来备份源文件。以下是步骤：
 
 1.在git上创建一个分支取名hexo，这个取名可以随意的。
 
 2.设置hexo为默认分支。
 
-3.在本地新建个文件夹，将hexo仓库clone至本地，将之前源文件夹中的内容复制到此目录，即username.github.io，publ">
+3.在本地新建个文件夹，将hexo仓库clone至本地，将之前源文件夹中的内容复制到此目录，即username.github.io，pu">
 
 
 
@@ -380,7 +380,7 @@
       
 
       
-        <p>博客搭建好后，在git里面的只有静态文件，没有.md源文件。所以不备份的话，以后换电脑或者换个环境是个问题。通用的方法是使用git分支来备份源文件。<br>以下是步骤：</p>
+        <h2 id="备份"><a href="#备份" class="headerlink" title="备份"></a>备份</h2><p>博客搭建好后，在git里面的只有静态文件，没有.md源文件。所以不备份的话，以后换电脑或者换个环境是个问题。通用的方法是使用git分支来备份源文件。<br>以下是步骤：</p>
 <ul>
 <li><p>1.在git上创建一个分支取名hexo，这个取名可以随意的。</p>
 </li>
@@ -390,13 +390,37 @@
 </li>
 <li><p>4.如果之前的目录内，如主题等，里面有.git，要将其删除掉，否则无法push。</p>
 </li>
-<li><p>5.在username.github.io目录下，执行<strong>npm install</strong> , <strong>npm install hexo-deployer-git</strong>。</p>
+<li><p>5.在username.github.io目录下，执行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">npm install</div><div class="line">npm install hexo-deployer-git</div></pre></td></tr></table></figure>
 </li>
-<li><p>6.执行<strong>git add</strong>，<strong>git commit -m “消息内容”</strong>，<strong>git push origin hexo</strong>提交源文件。</p>
+<li><p>6.执行提交源文件。</p>
+<figure class="highlight plain"><figcaption><span>add</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git commit -m &quot;文件提交&quot;</div><div class="line">git push origin hexo</div></pre></td></tr></table></figure>
 </li>
-<li><p>7.执行hexo g -d生成静态文件部署到git上。</p>
+<li><p>7.生成静态文件部署到git上。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo g -d</div></pre></td></tr></table></figure>
 </li>
 </ul>
+<h2 id="发布、修改"><a href="#发布、修改" class="headerlink" title="发布、修改"></a>发布、修改</h2><p>以后在本地username.github.io内对博客内容进行修改后，做两部即可。</p>
+<ul>
+<li><p>1.备份源文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git add .</div><div class="line">git commit -m &quot;文件提交、修改&quot;</div><div class="line">git push //如果不放心，可以指定git push origin hexo</div></pre></td></tr></table></figure>
+</li>
+<li><p>2.生成静态网页并部署</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo g -d</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>以后重复这两步即可。</p>
+<h2 id="从备份恢复"><a href="#从备份恢复" class="headerlink" title="从备份恢复"></a>从备份恢复</h2><ul>
+<li>1.目标电脑安装git</li>
+<li>2.安装node.js和npm</li>
+<li>3.将仓库从git克隆之本地</li>
+<li>4.执行命令<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">npm install hexo-cli -g</div><div class="line">npm install</div><div class="line">npm install hexo-deployer-git</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h2><p>Hexo的源文件说明：<br>1、_config.yml站点的配置文件，需要拷贝；<br>2、themes/主题文件夹，需要拷贝；<br>3、source博客文章的.md文件，需要拷贝；<br>4、scaffolds/文章的模板，需要拷贝；<br>5、package.json安装包的名称，需要拷贝；<br>6、.gitignore限定在push时哪些文件可以忽略，需要拷贝；<br>7、.git/主题和站点都有，标志这是一个git项目，不需要拷贝；<br>8、node_modules/是安装包的目录，在执行npm install的时候会重新生成，不需要拷贝；<br>9、public是hexo g生成的静态网页，不需要拷贝；<br>10、.deploy_git同上，hexo g也会生成，不需要拷贝；<br>11、db.json文件，不需要拷贝。</p>
+<h2 id="hexo命令补充说明"><a href="#hexo命令补充说明" class="headerlink" title="hexo命令补充说明"></a>hexo命令补充说明</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">hexo new &quot;postName&quot; #新建文章</div><div class="line">hexo new page &quot;pageName&quot; #新建页面</div><div class="line">hexo generate #生成静态页面至public目录</div><div class="line">hexo server #开启预览访问端口（默认端口4000，&apos;ctrl + c&apos;关闭server）</div><div class="line">hexo deploy #将.deploy目录部署到GitHub</div><div class="line">hexo help  # 查看帮助</div><div class="line">hexo version  #查看Hexo的版本</div><div class="line">hexo deploy -g  #生成加部署</div><div class="line">hexo server -g  #生成加预览</div><div class="line">命令的简写</div><div class="line">hexo n == hexo new</div><div class="line">hexo g == hexo generate</div><div class="line">hexo s == hexo server</div><div class="line">hexo d == hexo deploy</div></pre></td></tr></table></figure>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="http://www.jianshu.com/p/baab04284923" target="_blank" rel="external">怎么去备份你的hexo博客</a></p>
+<p><a href="http://www.jianshu.com/p/a2fe56d11c4f" target="_blank" rel="external">搭建Hexo博客中碰到的坑</a></p>
 
       
     </div>
@@ -481,8 +505,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -573,6 +606,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#备份"><span class="nav-number">1.</span> <span class="nav-text">备份</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#发布、修改"><span class="nav-number">2.</span> <span class="nav-text">发布、修改</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#从备份恢复"><span class="nav-number">3.</span> <span class="nav-text">从备份恢复</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#附录"><span class="nav-number">4.</span> <span class="nav-text">附录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hexo命令补充说明"><span class="nav-number">5.</span> <span class="nav-text">hexo命令补充说明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考"><span class="nav-number">6.</span> <span class="nav-text">参考</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
