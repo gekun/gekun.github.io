@@ -336,8 +336,7 @@ Stay hungry, stay foolish.  —Steve Jobs">
   
     <div class="comments" id="comments">
       
-        <div onclick="showGitment()" id="gitment-display-button">显示 Gitment 评论</div>
-        <div id="gitment-container" style="display:none"></div>
+        <div id="gitment-container"></div>
       
     </div>
 
@@ -653,8 +652,8 @@ Stay hungry, stay foolish.  —Steve Jobs">
       function renderGitment(){
         var gitment = new Gitmint({
             id: window.location.pathname, 
-            owner: '2884250',
-            repo: 'https://github.com/gekun/gekun.github.io.git',
+            owner: 'gekun',
+            repo: 'gekun.github.io',
             
             lang: "" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
             
@@ -669,11 +668,7 @@ Stay hungry, stay foolish.  —Steve Jobs">
       }
 
       
-      function showGitment(){
-        document.getElementById("gitment-display-button").style.display = "none";
-        document.getElementById("gitment-container").style.display = "block";
-        renderGitment();
-      }
+      renderGitment();
       
       </script>
     
