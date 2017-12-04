@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="坤哥" />
+  <meta name="keywords" content="Oracle,错误," />
 
 
 
@@ -79,22 +79,19 @@
 
 
 
-<meta name="description" content="hexo用的很不熟。
-今天抽空复习了一下md文件的写法。
-有时间再去hexo中文官网去看看文档，学学如何使用hexo。">
+<meta name="description" content="今天在使用导入Oracle数据的时候，出现了IMP-00019 IMP-00003 ORA-00001错误。后来经过查询网络，了解了问题所在。因为表之间有关联，所有需要先删除原有的表和数据。所有删除已经存在的表，再用imp导入，就顺利导入了。
+说明之前只要建立表空间和用户就可以了，建表的sql可以不去跑，反正建好后也要删。备份恢复的事不是天天干，时间长就忘了。。。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="hexo用的很不熟">
-<meta property="og:url" content="http://wxmng.com/2017/11/28/hexo用的很不熟/index.html">
+<meta property="og:title" content="Oracle导入时IMP-00019 IMP-00003 ORA-00001错误">
+<meta property="og:url" content="http://wxmng.com/2017/12/04/imporacleerror/index.html">
 <meta property="og:site_name" content="Kun's">
-<meta property="og:description" content="hexo用的很不熟。
-今天抽空复习了一下md文件的写法。
-有时间再去hexo中文官网去看看文档，学学如何使用hexo。">
-<meta property="og:updated_time" content="2017-11-29T04:48:00.438Z">
+<meta property="og:description" content="今天在使用导入Oracle数据的时候，出现了IMP-00019 IMP-00003 ORA-00001错误。后来经过查询网络，了解了问题所在。因为表之间有关联，所有需要先删除原有的表和数据。所有删除已经存在的表，再用imp导入，就顺利导入了。
+说明之前只要建立表空间和用户就可以了，建表的sql可以不去跑，反正建好后也要删。备份恢复的事不是天天干，时间长就忘了。。。">
+<meta property="og:updated_time" content="2017-12-04T12:21:45.808Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="hexo用的很不熟">
-<meta name="twitter:description" content="hexo用的很不熟。
-今天抽空复习了一下md文件的写法。
-有时间再去hexo中文官网去看看文档，学学如何使用hexo。">
+<meta name="twitter:title" content="Oracle导入时IMP-00019 IMP-00003 ORA-00001错误">
+<meta name="twitter:description" content="今天在使用导入Oracle数据的时候，出现了IMP-00019 IMP-00003 ORA-00001错误。后来经过查询网络，了解了问题所在。因为表之间有关联，所有需要先删除原有的表和数据。所有删除已经存在的表，再用imp导入，就顺利导入了。
+说明之前只要建立表空间和用户就可以了，建表的sql可以不去跑，反正建好后也要删。备份恢复的事不是天天干，时间长就忘了。。。">
 
 
 
@@ -124,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="http://wxmng.com/2017/11/28/hexo用的很不熟/"/>
+  <link rel="canonical" href="http://wxmng.com/2017/12/04/imporacleerror/"/>
 
 
 
 
 
-  <title>hexo用的很不熟 | Kun's</title>
+  <title>Oracle导入时IMP-00019 IMP-00003 ORA-00001错误 | Kun's</title>
   
 
 
@@ -301,7 +298,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://wxmng.com/2017/11/28/hexo用的很不熟/">
+    <link itemprop="mainEntityOfPage" href="http://wxmng.com/2017/12/04/imporacleerror/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Kun">
@@ -318,7 +315,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">hexo用的很不熟</h1>
+          <h1 class="post-title" itemprop="name headline">Oracle导入时IMP-00019 IMP-00003 ORA-00001错误</h1>
         
 
         <div class="post-meta">
@@ -330,8 +327,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-28T22:38:49+08:00">
-                2017-11-28
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-04T20:15:44+08:00">
+                2017-12-04
               </time>
             
 
@@ -368,9 +365,8 @@
       
 
       
-        <p>hexo用的很不熟。</p>
-<p>今天抽空复习了一下md文件的写法。</p>
-<p>有时间再去<a href="https://hexo.io/zh-cn/docs/index.html" target="_blank" rel="external">hexo中文官网</a>去看看文档，学学如何使用hexo。</p>
+        <p>今天在使用导入Oracle数据的时候，出现了IMP-00019 IMP-00003 ORA-00001错误。<br>后来经过查询网络，了解了问题所在。因为表之间有关联，所有需要先删除原有的表和数据。<br>所有删除已经存在的表，再用imp导入，就顺利导入了。</p>
+<p>说明之前只要建立表空间和用户就可以了，建表的sql可以不去跑，反正建好后也要删。<br>备份恢复的事不是天天干，时间长就忘了。。。</p>
 
       
     </div>
@@ -386,6 +382,14 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/Oracle/" rel="tag"># Oracle</a>
+          
+            <a href="/tags/错误/" rel="tag"># 错误</a>
+          
+        </div>
+      
 
       
       
@@ -395,8 +399,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/11/28/错误/" rel="next" title="错误">
-                <i class="fa fa-chevron-left"></i> 错误
+              <a href="/2017/11/30/howtobackupblog/" rel="next" title="如何去备份hexo博客">
+                <i class="fa fa-chevron-left"></i> 如何去备份hexo博客
               </a>
             
           </div>
@@ -404,10 +408,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/11/29/关于hexo的一些/" rel="prev" title="关于hexo的一些">
-                关于hexo的一些 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
