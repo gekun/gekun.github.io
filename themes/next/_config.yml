@@ -400,12 +400,13 @@ gitment:
   enable: true
   mint: true # RECOMMEND, A mint on Gitment, to support count, language and proxy_gateway
   count: true # Show comments count in post meta area
-  lazy: true # Comments lazy loading with a button
+  lazy: false # Comments lazy loading with a button
   cleanly: false # Hide 'Powered by ...' on footer, and more
   language: # Force language, or auto switch by theme
   github_user: gekun
+  # 2884250
   # MUST HAVE, Your Github ID
-  github_repo: https://github.com/gekun/hexocomments.git
+  github_repo: gekun.github.io
   # MUST HAVE, The repo you use to store Gitment comments
   client_id: 7d251d046e736664c250
   client_secret: 23a97190e931c63fe3cd1ba56cda2801bb3cddbf
