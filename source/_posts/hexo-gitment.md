@@ -9,8 +9,8 @@ tags:
 参考了网上一些的教程，配置了gitment，记录一下。
 
 ## 注册 OAuth Application
-到[这里](https://github.com/settings/applications/new)注册一个新的OAuth Application。Authorization callback URL 回调网址填我自己的网址：http://wxmng.com。
-采购之后会得到一个 client ID 和一个 client secret。
+到[这里](https://github.com/settings/applications/new)注册一个新的OAuth Application。Authorization callback URL 回调网址填我自己的网址：[http://wxmng.com](http://wxmng.com)。
+成功之后会得到一个 client ID 和一个 client secret。
 
 ## 修改next主题下_config.yml
 以下是我的成功的配置：
