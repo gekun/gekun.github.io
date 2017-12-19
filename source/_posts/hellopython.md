@@ -30,7 +30,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 >>> print "Hello World!"
 Hello World!
 ```
-我们可以到运行结果.
+我们可以看到运行结果.
 
 我们也可以新建个文本文档,命名为**hello.py**,将上面的脚本输入并保存,然后执行命令:
 ```

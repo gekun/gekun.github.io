@@ -29,10 +29,10 @@ tags:
 (venv) promote:bin kun$ pip install django==1.9
 ```
 
-- 执行 django-admin.py startproject stuproject
+- 执行 
 
 ``` bash
-(venv) promote:bin kun$ django-admin.py startproject
+(venv) promote:bin kun$ python django-admin.py startproject
 ```
 
 - 在当前目录内会生成startproject文件夹,进入文件夹可以看到目录结构
