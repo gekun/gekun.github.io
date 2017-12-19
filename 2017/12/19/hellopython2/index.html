@@ -96,12 +96,15 @@
 <meta property="og:image" content="http://p066esquq.bkt.clouddn.com/1.png">
 <meta property="og:image" content="http://p066esquq.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-12-19%2014.44.40.png">
 <meta property="og:image" content="http://p066esquq.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-12-19%2014.45.01.png">
+<meta property="og:image" content="http://p066esquq.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-12-19%2015.02.42.png">
+<meta property="og:image" content="http://p066esquq.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-12-19%2015.12.55.png">
+<meta property="og:image" content="http://p066esquq.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-12-19%2015.17.11.png">
 <meta property="og:image" content="http://p066esquq.bkt.clouddn.com/2.png">
 <meta property="og:image" content="http://p066esquq.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-12-19%2015.38.43.png">
 <meta property="og:image" content="http://p066esquq.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-12-19%2015.41.51.png">
 <meta property="og:image" content="http://p066esquq.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-12-19%2015.43.27.png">
 <meta property="og:image" content="http://p066esquq.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-12-19%2015.48.02.png">
-<meta property="og:updated_time" content="2017-12-19T07:59:16.259Z">
+<meta property="og:updated_time" content="2017-12-19T08:07:10.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python入门(二):PyCharm开发环境">
 <meta name="twitter:description" content="开发Python的首选?那自然是PyCharm.来自于JetBrain家族的强大基因.😝
@@ -401,23 +404,44 @@
 <p>在这个默认的情况下,创建项目最后会提示错误如下:<br><img src="http://p066esquq.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-12-19%2014.44.40.png" alt="错误"><br>创建的项目结构也是有问题的.<br><img src="http://p066esquq.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-12-19%2014.45.01.png" alt="错误"></p>
 <p>产生这个错误的根本原因是:Mac内置的Python版本有点低,和项目自动获取到的最新的Django(目前是2.0)存在兼容问题.所以解决的办法有两种:</p>
 <h3 id="1-使用旧版本的Django-如1-9版本"><a href="#1-使用旧版本的Django-如1-9版本" class="headerlink" title="1.使用旧版本的Django,如1.9版本"></a>1.使用旧版本的Django,如1.9版本</h3><ul>
-<li>进入终端,转到项目下bin目录,输入命令:<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">(venv) promote:bin kun$ pip install django==1.9</div><div class="line">Collecting django==1.9</div><div class="line">  Using cached Django-1.9-py2.py3-none-any.whl</div><div class="line">Installing collected packages: django</div><div class="line">Successfully installed django-1.9</div><div class="line">```   </div><div class="line"></div><div class="line">- 执行 django-admin.py startproject stuproject</div></pre></td></tr></table></figure>
-</li>
+<li>进入终端,转到项目下bin目录,输入命令</li>
 </ul>
-<p>(venv) promote:bin kun$ django-admin.py startproject<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">- 在当前目录内会生成startproject文件夹,进入文件夹可以看到目录结构</div><div class="line">![结构](http://p066esquq.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-12-19%2015.02.42.png)</div><div class="line">    </div><div class="line">* 执行 python managy.py runserver,看到服务器已经启动.在浏览器里输入网址访问http://127.0.0.1:8000/即可看到示例页面.</div></pre></td></tr></table></figure></p>
-<p>(venv) promote:stuproject kun$ python manage.py runserver<br>Performing system checks…<br>Django version 1.9, using settings ‘stuproject.settings’<br>Starting development server at <a href="http://127.0.0.1:8000/" target="_blank" rel="external">http://127.0.0.1:8000/</a><br>Quit the server with CONTROL-C.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">![itworks](http://p066esquq.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-12-19%2015.12.55.png)</div><div class="line"></div><div class="line">* 创建应用stu,终端下输入命令</div></pre></td></tr></table></figure></p>
-<p>python manage.py startapp stu<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">得到一个名为stu的项目应用.</div><div class="line"></div><div class="line">![stuapp](http://p066esquq.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-12-19%2015.17.11.png)</div><div class="line"></div><div class="line"></div><div class="line">### 2.在Mac下安装一个新的Python版本</div><div class="line">在这一节,我们来安装一个新的Python版本,我们需要在终端下输入一些命令来安装一些工具来进行安装.</div><div class="line"></div><div class="line">- 安装HomeBrew[前提是要有xcode环境]</div></pre></td></tr></table></figure></p>
-<p>/usr/bin/ruby -e “$(curl -fsSL <a href="https://raw.githubusercontent.com/Homebrew/install/master/install" target="_blank" rel="external">https://raw.githubusercontent.com/Homebrew/install/master/install</a>)”<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">- 检查安装成功与否</div></pre></td></tr></table></figure></p>
-<p>brew doctor<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">- 安装Python3</div></pre></td></tr></table></figure></p>
-<p>brew install python3<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">- 检查python版本,安装的为Python3.6.3版本.</div></pre></td></tr></table></figure></p>
-<p>kun$ python3<br>Python 3.6.3 (default, Dec 17 2017, 22:42:13)<br>[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.39.2)] on darwin<br>Type “help”, “copyright”, “credits” or “license” for more information.</p>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>```</p>
-</blockquote>
-</blockquote>
-</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">(venv) promote:bin kun$ pip install django==1.9</div></pre></td></tr></table></figure>
+<ul>
+<li>执行 django-admin.py startproject stuproject</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">(venv) promote:bin kun$ django-admin.py startproject</div></pre></td></tr></table></figure>
+<ul>
+<li>在当前目录内会生成startproject文件夹,进入文件夹可以看到目录结构<br><img src="http://p066esquq.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-12-19%2015.02.42.png" alt="结构"></li>
+</ul>
+<ul>
+<li>执行 python managy.py runserver,看到服务器已经启动.在浏览器里输入网址访问<a href="http://127.0.0.1:8000/即可看到示例页面" target="_blank" rel="external">http://127.0.0.1:8000/即可看到示例页面</a>.</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">(venv) promote:stuproject kun$ python manage.py runserver</div><div class="line">Performing system checks...</div><div class="line">Django version 1.9, using settings <span class="string">'stuproject.settings'</span></div><div class="line">Starting development server at http://127.0.0.1:8000/</div><div class="line">Quit the server with CONTROL-C.</div></pre></td></tr></table></figure>
+<p><img src="http://p066esquq.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-12-19%2015.12.55.png" alt="itworks"></p>
+<ul>
+<li>创建应用stu,终端下输入命令</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">python manage.py startapp stu</div></pre></td></tr></table></figure>
+<p>得到一个名为stu的项目应用.</p>
+<p><img src="http://p066esquq.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-12-19%2015.17.11.png" alt="stuapp"></p>
+<h3 id="2-在Mac下安装一个新的Python版本"><a href="#2-在Mac下安装一个新的Python版本" class="headerlink" title="2.在Mac下安装一个新的Python版本"></a>2.在Mac下安装一个新的Python版本</h3><p>在这一节,我们来安装一个新的Python版本,我们需要在终端下输入一些命令来安装一些工具来进行安装.</p>
+<ul>
+<li>安装HomeBrew[前提是要有xcode环境]</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/usr/bin/ruby <span class="_">-e</span> <span class="string">"<span class="variable">$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)</span>"</span></div></pre></td></tr></table></figure>
+<ul>
+<li>检查安装成功与否</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew doctor</div></pre></td></tr></table></figure>
+<ul>
+<li>安装Python3</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew install python3</div></pre></td></tr></table></figure>
+<ul>
+<li>检查python版本,安装的为Python3.6.3版本.</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">kun$ python3</div><div class="line">Python 3.6.3 (default, Dec 17 2017, 22:42:13) </div><div class="line">[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.39.2)] on darwin</div><div class="line">Type <span class="string">"help"</span>, <span class="string">"copyright"</span>, <span class="string">"credits"</span> or <span class="string">"license"</span> <span class="keyword">for</span> more information.</div><div class="line">&gt;&gt;&gt;</div></pre></td></tr></table></figure>
 <ul>
 <li><p>打开PyCharm,新建Django项目,这次配置如下图,画红框处表示选择Python3.<br><img src="http://p066esquq.bkt.clouddn.com/2.png" alt="newconfig"></p>
 <blockquote>
@@ -653,7 +677,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#新建Django项目"><span class="nav-number">1.</span> <span class="nav-text">新建Django项目</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-使用旧版本的Django-如1-9版本"><span class="nav-number">1.1.</span> <span class="nav-text">1.使用旧版本的Django,如1.9版本</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#新建Django项目"><span class="nav-number">1.</span> <span class="nav-text">新建Django项目</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-使用旧版本的Django-如1-9版本"><span class="nav-number">1.1.</span> <span class="nav-text">1.使用旧版本的Django,如1.9版本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-在Mac下安装一个新的Python版本"><span class="nav-number">1.2.</span> <span class="nav-text">2.在Mac下安装一个新的Python版本</span></a></li></ol></li></ol></div>
             
 
           </div>
