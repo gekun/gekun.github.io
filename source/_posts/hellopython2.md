@@ -30,10 +30,12 @@ Collecting django==1.9
 Installing collected packages: django
 Successfully installed django-1.9
 ```   
+
 - 执行 django-admin.py startproject stuproject
 ```
 (venv) promote:bin kun$ django-admin.py startproject
 ```
+
 - 在当前目录内会生成startproject文件夹,进入文件夹可以看到目录结构
 ![结构](http://p066esquq.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-12-19%2015.02.42.png)
     
@@ -45,6 +47,7 @@ Django version 1.9, using settings 'stuproject.settings'
 Starting development server at http://127.0.0.1:8000/
 Quit the server with CONTROL-C.
 ```
+
 ![itworks](http://p066esquq.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-12-19%2015.12.55.png)
 
 * 创建应用stu,终端下输入命令
@@ -64,14 +67,17 @@ python manage.py startapp stu
 ```
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
+
 - 检查安装成功与否
 ```
 brew doctor
 ```
+
 - 安装Python3
 ```
 brew install python3
 ```
+
 - 检查python版本,安装的为Python3.6.3版本.
 ```
 kun$ python3
@@ -80,6 +86,7 @@ Python 3.6.3 (default, Dec 17 2017, 22:42:13)
 Type "help", "copyright", "credits" or "license" for more information.
 >>> 
 ```
+
 - 打开PyCharm,新建Django项目,这次配置如下图,画红框处表示选择Python3.
 ![newconfig](http://p066esquq.bkt.clouddn.com/2.png)
 > 注意:python3的目录是/usr/local/bin,而默认的python的目录为/usr/bin/
