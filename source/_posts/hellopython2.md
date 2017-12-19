@@ -22,17 +22,16 @@ tags:
 
 产生这个错误的根本原因是:Mac内置的Python版本有点低,和项目自动获取到的最新的Django(目前是2.0)存在兼容问题.所以解决的办法有两种:
 ### 1.使用旧版本的Django,如1.9版本
-- 进入终端,转到项目下bin目录,输入命令:
-```
+
+- 进入终端,转到项目下bin目录,输入命令
+
+``` bash
 (venv) promote:bin kun$ pip install django==1.9
-Collecting django==1.9
-  Using cached Django-1.9-py2.py3-none-any.whl
-Installing collected packages: django
-Successfully installed django-1.9
-```   
+```
 
 - 执行 django-admin.py startproject stuproject
-```
+
+``` bash
 (venv) promote:bin kun$ django-admin.py startproject
 ```
 
@@ -40,7 +39,8 @@ Successfully installed django-1.9
 ![结构](http://p066esquq.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-12-19%2015.02.42.png)
     
 * 执行 python managy.py runserver,看到服务器已经启动.在浏览器里输入网址访问http://127.0.0.1:8000/即可看到示例页面.
-```
+
+``` bash
 (venv) promote:stuproject kun$ python manage.py runserver
 Performing system checks...
 Django version 1.9, using settings 'stuproject.settings'
@@ -51,7 +51,8 @@ Quit the server with CONTROL-C.
 ![itworks](http://p066esquq.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-12-19%2015.12.55.png)
 
 * 创建应用stu,终端下输入命令
-```
+
+``` bash
 python manage.py startapp stu
 ```
 
@@ -64,22 +65,26 @@ python manage.py startapp stu
 在这一节,我们来安装一个新的Python版本,我们需要在终端下输入一些命令来安装一些工具来进行安装.
 
 - 安装HomeBrew[前提是要有xcode环境]
-```
+
+``` bash
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
 - 检查安装成功与否
-```
+
+``` bash
 brew doctor
 ```
 
 - 安装Python3
-```
+
+``` bash
 brew install python3
 ```
 
 - 检查python版本,安装的为Python3.6.3版本.
-```
+
+``` bash
 kun$ python3
 Python 3.6.3 (default, Dec 17 2017, 22:42:13) 
 [GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.39.2)] on darwin
