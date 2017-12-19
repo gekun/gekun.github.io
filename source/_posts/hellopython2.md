@@ -51,9 +51,11 @@ Quit the server with CONTROL-C.
 ```
 python manage.py startapp stu
 ```
+
 得到一个名为stu的项目应用.
 
 ![stuapp](http://p066esquq.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-12-19%2015.17.11.png)
+
 
 ### 2.在Mac下安装一个新的Python版本
 在这一节,我们来安装一个新的Python版本,我们需要在终端下输入一些命令来安装一些工具来进行安装.
