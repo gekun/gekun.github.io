@@ -1,0 +1,14 @@
+---
+title: which-programming-language-should-i-learn
+date: 2017-12-24 18:06:19
+tags:
+- python
+- 指南
+---
+> 作为编程初学者，面对眼花缭乱的编程语言，往往会陷入一种选择困难。这张图给出了参考，里面对你学习编程的原因和动机进行分析，试图找出一个适合你的出路；图中又对几大流行编程语言进行比较，并把他们比喻成《指环王》中的角色。让我们来看看你所中意的编程语言，在剧中是个什么角色吧。😋
+
+![我该选择哪一门编程语言来学习](http://p066esquq.bkt.clouddn.com/%E6%88%91%E8%AF%A5%E5%AD%A6%E4%B9%A0%E5%93%AA%E4%B8%80%E9%97%A8%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80.jpg)
+
+原英文图来自：http://carlcheo.com/STARTCODING
+本文 中文版PDF：[另存为下载](http://p066esquq.bkt.clouddn.com/%E6%88%91%E8%AF%A5%E5%AD%A6%E4%B9%A0%E5%93%AA%E4%B8%80%E9%97%A8%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80.pdf)
+
